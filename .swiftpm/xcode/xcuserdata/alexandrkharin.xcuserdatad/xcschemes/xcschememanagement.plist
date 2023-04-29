@@ -17,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>DataStructures</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>LinkedList</key>
 		<dict>
 			<key>primary</key>
