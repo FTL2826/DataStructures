@@ -10,7 +10,7 @@ final public class LinkedListNode<T> {
     var next: LinkedListNode?
     var previous: LinkedListNode?
     
-    init(_ value: T, _ next: LinkedListNode? = nil, _ previous: LinkedListNode? = nil) {
+    public init(_ value: T, _ next: LinkedListNode? = nil, _ previous: LinkedListNode? = nil) {
         self.value = value
         self.next = next
         self.previous = previous
