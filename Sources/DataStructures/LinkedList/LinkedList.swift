@@ -11,6 +11,8 @@ final public class LinkedList<T>: Sequence {
     private var head: Node?
     private var tail: Node?
     
+    public init() {}
+    
     // O(1)
     public var first: Node? {
         head
