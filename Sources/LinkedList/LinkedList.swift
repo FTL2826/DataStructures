@@ -6,24 +6,24 @@
 //
 
 final public class LinkedList<T>: Sequence {
-    typealias Node = LinkedListNode<T>
+    public typealias Node = LinkedListNode<T>
     
     private var head: Node?
     private var tail: Node?
     
     // O(1)
-    var first: Node? {
+    public var first: Node? {
         head
     }
     
     // O(1)
-    var last: Node? {
+    public var last: Node? {
         tail
     }
-    var count: Int = 0
+    public var count: Int = 0
     
     // O(n)
-    var print: String {
+    public var print: String {
         var strOutput = "["
         guard var node = head else { return "[]" }
         while let next = node.next {
@@ -35,7 +35,7 @@ final public class LinkedList<T>: Sequence {
     }
     
     // O(1)
-    func append(_ value: T) {
+    public func append(_ value: T) {
         count += 1
         let newNode = Node(value)
         if let lastNode = tail {
@@ -48,7 +48,7 @@ final public class LinkedList<T>: Sequence {
     }
     
     // O(index)
-    func node(atIndex index: Int) -> Node? {
+    public func node(atIndex index: Int) -> Node? {
         guard index < count else { return nil }
         if index == 0 {
             return head
