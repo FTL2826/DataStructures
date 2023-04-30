@@ -1,3 +1,7 @@
 # DataStructures
 
-A description of this package.
+## Basic data structures
+- [Linked list](Sources/DataStructures/LinkedList)
+
+## License
+This project is open source and available under the MIT [License](License.md)
