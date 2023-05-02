@@ -13,6 +13,7 @@ Picture [*source*](https://www.geeksforgeeks.org/data-structures/linked-list/dou
 - [Node(atIndex:)](#nodeAt)
 - [InsertNode(atIndex:)](#insertAt)
 - [RemoveNode(atIndex:)](#removeAt)
+- [Reversed](#reversed)
 - [Syntax sugar](#syntax-sugar)
 - [Test coverage](#test-coverage)
 
@@ -75,6 +76,10 @@ Method that allow you to delete node at any position in list. Can return **nil**
 Complexity:
 - *O(1)* for deleting at start and end of list.
 - *O(index)* for deleting at other specific indicies.
+
+### Reversed
+Method that reverse list from head to tail. Change list order in it (update first & last).
+Complexity: *O(n)*
 
 ### Syntax sugar
 You can traverse full list as standart iterator for an array

@@ -123,4 +123,21 @@ final public class LinkedList<T>: Sequence {
         return node
     }
     
+    func reversed() {
+        var ptr1 = head
+        var ptr2 = ptr1?.next
+        
+        ptr1?.next = nil
+        ptr1?.previous = ptr2
+        
+        while ptr2 != nil {
+            ptr2?.previous = ptr2?.next
+            ptr2?.next = ptr1
+            ptr1 = ptr2
+            ptr2 = ptr2?.previous
+        }
+        tail = head
+        head = ptr1
+    }
+    
 }

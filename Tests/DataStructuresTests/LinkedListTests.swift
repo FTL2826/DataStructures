@@ -154,5 +154,18 @@ final class LinkedListTests: XCTestCase {
         XCTAssert(nodeToDelete === deletedNode)
         
     }
+    
+    func testReverse() {
+        // Given
+        list.append("1")
+        list.append("2")
+        list.append("3")
+        // When
+        list.reversed()
+        // Then
+        XCTAssertEqual(list.print, "[3, 2, 1]")
+        XCTAssertEqual(list.last!.value, "1")
+        XCTAssertEqual(list.first!.value, "3")
+    }
 
 }
