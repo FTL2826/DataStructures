@@ -51,25 +51,76 @@ final public class LinkedList<T>: Sequence {
     
     // O(index)
     public func node(atIndex index: Int) -> Node? {
-        guard index < count else { return nil }
+        guard index < count && index >= 0 else { return nil }
+        var node: LinkedListNode<T>?
         if index == 0 {
             return head
         } else if index == count - 1 {
             return tail
         } else {
-            var node = head?.next
+            node = head?.next
             var curIndex = 1
             while index > curIndex {
                 node = node?.next
                 curIndex += 1
             }
-            return node
         }
+        return node
     }
     
     // travers O(n)
     public func makeIterator() -> LinkedListIterator<T> {
         LinkedListIterator<T>(start: head)
+    }
+    
+    public func insertNode(atIndex index: Int, _ value: T) -> Bool {
+        guard index <= count && index >= 0 else { return false }
+        let newNode = LinkedListNode(value)
+        if index == 0 {
+            let p = head
+            newNode.next = p
+            p?.previous = newNode
+            head = newNode
+        } else if index == count {
+            tail?.next = newNode
+            newNode.previous = tail
+            tail = newNode
+        } else {
+            guard let p = node(atIndex: index) else { return false }
+            newNode.previous = p.previous
+            newNode.next = p
+            p.previous?.next = newNode
+            p.previous = newNode
+        }
+        count += 1
+        
+        return true
+    }
+    
+    public func removeNode(atIndex index: Int) -> Node? {
+        guard index < count && index >= 0 else { return nil }
+        let node: Node?
+        if index == 0 {
+            node = head
+            head = head?.next
+        } else if index == count - 1 {
+            node = tail
+            tail = tail?.previous
+            tail?.next = nil
+        } else {
+            node = self.node(atIndex: index)
+            let prev = node?.previous
+            let next = node?.next
+            
+            prev?.next = next
+            next?.previous = prev
+        }
+    
+        node?.next = nil
+        node?.previous = nil
+        
+        count -= 1
+        return node
     }
     
 }

@@ -22,6 +22,10 @@ let package = Package(
             name: "LinkedList",
             dependencies: [],
             path: "Sources/DataStructures"),
+        .testTarget(
+            name: "LinkedListTests",
+            dependencies: ["LinkedList"],
+            path: "Tests/DataStructuresTests")
         
     ]
 )
