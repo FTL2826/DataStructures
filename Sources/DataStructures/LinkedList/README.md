@@ -10,9 +10,9 @@ Picture [*source*](https://www.geeksforgeeks.org/data-structures/linked-list/dou
 - [Count](#count)
 - [Append](#append)
 - [Print](#print)
-- [NodeAt](#Node(atIndex:))
-- [InsertAt](#InsertNode(atIndex:))
-- [RemoveAt](#RemoveNode(atIndex:))
+- [Node(atIndex:)](#Node(atIndex:))
+- [InsertNode(atIndex:)](#InsertNode(atIndex:))
+- [RemoveNode(atIndex:)](#RemoveNode(atIndex:))
 - [Syntax sugar](#syntax-sugar)
 - [Test coverage](#test-coverage)
 
@@ -50,7 +50,8 @@ Property that return count of elements in list.
 Complexity: *O(1)*
 
 ### Append
-Method for appending a new element to end of the list with *O(1)* complexity
+Method for appending a new element to end of the list.  
+Complexity: *O(1)* 
 
 ### Print
 Method for printing all elements in command line like an array type [element1, element2, ..., elementn]  
@@ -76,7 +77,7 @@ Complexity:
 You can traverse full list as standart iterator for an array
 ```swift
 for node in list {
-	print(node.val)
+    print(node.val)
 }
 ```
 Complexity: *O(n)*
