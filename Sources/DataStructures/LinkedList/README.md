@@ -10,9 +10,9 @@ Picture [*source*](https://www.geeksforgeeks.org/data-structures/linked-list/dou
 - [Count](#count)
 - [Append](#append)
 - [Print](#print)
-- [Node(atIndex:)](#Node(atIndex:))
-- [InsertNode(atIndex:)](#InsertNode(atIndex:))
-- [RemoveNode(atIndex:)](#RemoveNode(atIndex:))
+- [Node(atIndex:)](#nodeAt)
+- [InsertNode(atIndex:)](#insertAt)
+- [RemoveNode(atIndex:)](#removeAt)
 - [Syntax sugar](#syntax-sugar)
 - [Test coverage](#test-coverage)
 
@@ -57,16 +57,19 @@ Complexity: *O(1)*
 Method for printing all elements in command line like an array type [element1, element2, ..., elementn]  
 Complexity: *O(n)*
 
+<a name="nodeAt"></a>
 ### Node(atIndex:)
 Method that return node element in list at specified index.  Can return **nil** if index is not exist.  
 Complexity: *O(n)*
 
+<a name="insertAt"></a>
 ### InsertNode(atIndex:)
 Method that allow you to insert new node at any position in list. Return **Bool** value that indicate success of insert operation.  
 Complexity: 
 - *O(1)* for inserting at start and end of list.  
 - *O(index)* for inserting at other specific indicies.
 
+<a name="removeAt"></a>
 ### RemoveNode(atIndex:)
 Method that allow you to delete node at any position in list. Can return **nil** if index out of bounds. Return **Node** that was deleted from list.
 Complexity:
