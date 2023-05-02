@@ -10,15 +10,15 @@ Picture [*source*](https://www.geeksforgeeks.org/data-structures/linked-list/dou
 - [Count](#count)
 - [Append](#append)
 - [Print](#print)
-- [Node(atIndex:)](#node(atIndex:))
-- [InsertNode](#insertNode(atIndex:))
-- [RemoveNode](#removeNode(atIndex:))
+- [NodeAt](#Node(atIndex:))
+- [InsertAt](#InsertNode(atIndex:))
+- [RemoveAt](#RemoveNode(atIndex:))
 - [Syntax sugar](#syntax-sugar)
 - [Test coverage](#test-coverage)
 
 ### Node model
 Model use generics as value for versatility.
-```
+```swift
 final public class LinkedListNode<T> {
     var value: T
     var next: LinkedListNode?
@@ -69,12 +69,12 @@ Complexity:
 ### RemoveNode(atIndex:)
 Method that allow you to delete node at any position in list. Can return **nil** if index out of bounds. Return **Node** that was deleted from list.
 Complexity:
-- *O(1) for deleting at start and end of list.
+- *O(1)* for deleting at start and end of list.
 - *O(index)* for deleting at other specific indicies.
 
 ### Syntax sugar
 You can traverse full list as standart iterator for an array
-```
+```swift
 for node in list {
 	print(node.val)
 }
