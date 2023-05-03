@@ -34,5 +34,33 @@ final class StackTests: XCTestCase {
         // Then
         XCTAssertEqual(stack.size, 2)
     }
+    
+    func testTopAndPop() {
+        // Given
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        // When
+        var val = stack.top()
+        // Then
+        XCTAssertEqual(val!, 3)
+        XCTAssertEqual(stack.pop()!, 3)
+        
+        // Given
+        // When
+        val = stack.top()
+        // Then
+        XCTAssertEqual(val!, 2)
+        XCTAssertEqual(stack.pop()!, 2)
+        
+        // Given
+        // When
+        val = stack.top()
+        // Then
+        XCTAssertEqual(val!, 1)
+        XCTAssertEqual(stack.pop()!, 1)
+        XCTAssertEqual(stack.size, 0)
+        XCTAssertTrue(stack.isEmpty)
+    }
 
 }

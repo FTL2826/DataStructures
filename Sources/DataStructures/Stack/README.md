@@ -24,7 +24,7 @@ Method that show value of the top item in stack.
 Complexity: *O(1)*
 
 ### isEmpty
-Property that return true if stack have no elements in it.
+Property that return true if stack have no elements in it.  
 Complexity: *O(1)*
 
 ### Size
