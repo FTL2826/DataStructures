@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "LinkedList",
             targets: ["LinkedList"]),
+        .library(
+            name: "Stack",
+            targets: ["Stack"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,11 +24,20 @@ let package = Package(
         .target(
             name: "LinkedList",
             dependencies: [],
-            path: "Sources/DataStructures"),
+            path: "Sources/DataStructures/LinkedList"),
         .testTarget(
             name: "LinkedListTests",
             dependencies: ["LinkedList"],
-            path: "Tests/DataStructuresTests")
+            path: "Tests/DataStructuresTests/LinkedListTests"),
+        
+        .target(
+            name: "Stack",
+            dependencies: ["LinkedList"],
+            path: "Sources/DataStructures/Stack"),
+        .testTarget(
+            name: "StackTests",
+            dependencies: ["Stack"],
+            path: "Tests/DataStructuresTests/StackTests"),
         
     ]
 )

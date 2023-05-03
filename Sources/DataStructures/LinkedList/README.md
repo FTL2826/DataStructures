@@ -61,24 +61,26 @@ Complexity: *O(n)*
 <a name="nodeAt"></a>
 ### Node(atIndex:)
 Method that return node element in list at specified index.  Can return **nil** if index is not exist.  
-Complexity: *O(n)*
+Complexity: 
+- *O(1)* for searching at start and end of list.
+- *O(n)* for searching at other specific indicies.
 
 <a name="insertAt"></a>
 ### InsertNode(atIndex:)
 Method that allow you to insert new node at any position in list. Return **Bool** value that indicate success of insert operation.  
 Complexity: 
 - *O(1)* for inserting at start and end of list.  
-- *O(index)* for inserting at other specific indicies.
+- *O(n)* for inserting at other specific indicies.
 
 <a name="removeAt"></a>
 ### RemoveNode(atIndex:)
 Method that allow you to delete node at any position in list. Can return **nil** if index out of bounds. Return **Node** that was deleted from list.
 Complexity:
 - *O(1)* for deleting at start and end of list.
-- *O(index)* for deleting at other specific indicies.
+- *O(n)* for deleting at other specific indicies.
 
 ### Reversed
-Method that reverse list from head to tail. Change list order in it (update first & last).
+Method that reverse list from head to tail. Change list order in it (update first & last).  
 Complexity: *O(n)*
 
 ### Syntax sugar
