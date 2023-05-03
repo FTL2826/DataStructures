@@ -60,7 +60,7 @@ final class LinkedListTests: XCTestCase {
         
         // Given
         // When
-        var nilNode = list.node(atIndex: list.count)
+        let nilNode = list.node(atIndex: list.count)
         // Then
         XCTAssertNil(nilNode)
         
@@ -105,19 +105,19 @@ final class LinkedListTests: XCTestCase {
         testTraverse()
         // Given
         // When
-        list.insertNode(atIndex: 0, "newHead")
+        let _ = list.insertNode(atIndex: 0, "newHead")
         // Then
         XCTAssertEqual(list.count, 6)
         
         // Given
         // When
-        list.insertNode(atIndex: list.count, "newTail")
+        let _ = list.insertNode(atIndex: list.count, "newTail")
         // Then
         XCTAssertEqual(list.count, 7)
         
         // Given
         // When
-        list.insertNode(atIndex: 2, "newNode")
+        let _ = list.insertNode(atIndex: 2, "newNode")
         // Then
         XCTAssert(list.node(atIndex: 2)!.value == "newNode")
         XCTAssertEqual(list.count, 8)
@@ -133,7 +133,7 @@ final class LinkedListTests: XCTestCase {
         // Given
         let zeroNode = list.node(atIndex: 0)
         // When
-        list.removeNode(atIndex: 0)
+        let _ = list.removeNode(atIndex: 0)
         // Then
         XCTAssert(list.node(atIndex: 0) !== zeroNode)
         XCTAssertEqual(list.count, 7)
@@ -141,7 +141,7 @@ final class LinkedListTests: XCTestCase {
         // Given
         let tailNode = list.last
         // When
-        list.removeNode(atIndex: list.count - 1)
+        let _ = list.removeNode(atIndex: list.count - 1)
         // Then
         XCTAssertEqual(list.count, 6)
         XCTAssert(tailNode !== list.last)
