@@ -1,4 +1,4 @@
-# Stack
+# Deque
 This is a Deque (double ended queue) implementation.  
 ![FIFO stack](Deque.png)  
 Picture [*source*](https://www.geeksforgeeks.org/different-types-of-queues-and-its-applications/)
