@@ -81,6 +81,9 @@ final public class LinkedList<T>: Sequence {
             newNode.next = p
             p?.previous = newNode
             head = newNode
+            if count == 0 {
+                tail = head
+            }
         } else if index == count {
             tail?.next = newNode
             newNode.previous = tail

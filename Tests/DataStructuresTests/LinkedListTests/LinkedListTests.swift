@@ -167,5 +167,11 @@ final class LinkedListTests: XCTestCase {
         XCTAssertEqual(list.last!.value, "1")
         XCTAssertEqual(list.first!.value, "3")
     }
+    
+    func testEmptyInsert() {
+        list.insertNode(atIndex: 0, "zero")
+        list.insertNode(atIndex: list.count, "one")
+        print(list.print)
+    }
 
 }
