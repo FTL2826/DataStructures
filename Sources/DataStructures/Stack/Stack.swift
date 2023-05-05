@@ -7,7 +7,7 @@
 import LinkedList
 
 final public class Stack<T> {
-    var list = LinkedList<T>()
+    private var list = LinkedList<T>()
     
     public var size: Int {
         list.count

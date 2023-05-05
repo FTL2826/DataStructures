@@ -12,7 +12,10 @@ let package = Package(
             targets: ["LinkedList"]),
         .library(
             name: "Stack",
-            targets: ["Stack"])
+            targets: ["Stack"]),
+        .library(
+            name: "Deque",
+            targets: ["Deque"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -38,6 +41,15 @@ let package = Package(
             name: "StackTests",
             dependencies: ["Stack"],
             path: "Tests/DataStructuresTests/StackTests"),
+        
+        .target(
+            name: "Deque",
+            dependencies: ["LinkedList"],
+            path: "Sources/DataStructures/Deque"),
+        .testTarget(
+            name: "DequeTests",
+            dependencies: ["Deque"],
+            path: "Tests/DataStructuresTests/DequeTests"),
         
     ]
 )
